@@ -1,0 +1,27 @@
+<div
+  cdkDropList
+  #mainDiv="cdkDropList"
+  class="main-list"
+  [cdkDropListData]="mainDivArray"
+  [cdkDropListConnectedTo]="[functionList]"
+  (cdkDropListDropped)="droppedIntoMain($event)"
+>
+  <div class="example-box2" *ngFor="let item of mainDivArray" cdkDrag>
+    {{ item.name }}
+  </div>
+  <div class="example-box2" *ngFor="let n of numberOfArgs"></div>
+</div>
+<br />
+<br />
+<div
+  cdkDropList
+  #functionList="cdkDropList"
+  class="example-list"
+  [cdkDropListData]="function_names"
+  [cdkDropListConnectedTo]="[mainDiv]"
+  (cdkDropListDropped)="droppedIntoFunctionList($event)"
+>
+  <div class="example-box" *ngFor="let function_name of function_names" cdkDrag>
+    {{ function_name.name }}
+  </div>
+</div>
