@@ -1,12 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  CdkDragDrop,
-  CdkDragEnd,
-  moveItemInArray,
-  transferArrayItem,
-  copyArrayItem
-} from "@angular/cdk/drag-drop";
-import { resetCompiledComponents } from "@angular/core/src/render3/jit/module";
+import { CdkDragDrop, copyArrayItem } from "@angular/cdk/drag-drop";
 
 interface FunctionConfig {
   name: string;
